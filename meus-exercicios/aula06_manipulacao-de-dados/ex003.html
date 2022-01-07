@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, lightblue, white);
+            color: purple;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h2>String > Número</h2>
+    <ul>
+        <li>Number.parseInt(n)</li>
+        <li>Number.parseFloat(n)</li>
+        <li>Number(n)</li>
+    </ul>
+    <h2>Número > String</h2>
+    <ul>
+        <li>String(n)</li>
+        <li>n.toString()</li>
+    </ul>
+    <h2>Template String</h2>
+    <ul><li>`Eu me chamo ${nome}`</li></ul>
+    <h2>Formatando Strings</h2>
+    <p>var s = 'JavaScript'</p>
+    <ul>
+        <li>s.length -> Quantidade de caracteres da string</li>
+        <li>s.toUpperCase() -> Transforma tudo em 'MAIÚSCULAS'</li>
+        <li>s.toLowerCase() -> Transforma tudo em 'minúsculas'</li>
+    </ul>
+
+    <script>
+        var num1 = Number(prompt('Digite um número: '))
+        var num2 = prompt('Digite outro número: ')
+        var soma = num1 + Number(num2)
+        alert(`A soma dos valores é ${String(soma)}`)
+    </script>
+
+</body>
+</html>
