@@ -1,2 +1,2 @@
 # javascript
- Estudos de JavaScript
+ Estudos de JavaScript pelo CursoemVídeo do Prof. Gustavo Guanabara
