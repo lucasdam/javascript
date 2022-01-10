@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros estudos com DOM</title>
+    <style>
+        body {
+            background: rgb(104, 99, 172);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="mensagem">Clique em mim</div>
+    <div id="msg">Teste querySelector Id</div>
+    <div class="msg2">Teste querySelector Class</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] // Seleciona um elemento HTML
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br>')
+        p1.style.color = 'blue'
+        corpo.style.background = 'black'
+        
+        document.write(p1.innerHTML)
+
+        var div = window.document.getElementById('mensagem')
+        div.style.background = 'green'
+        div.innerText = 'Estou aguardando...' // Modificado o conteúdo do HTML
+        window.document.getElementById('mensagem').innerText = 'Olá' // Modificando diretamente, sem o uso de variável
+
+        /* PODE USAR:
+        getElementById
+        getElementsByTagName
+        getElementsByClassName
+        getElementsByName
+        querySelector() ou querySelectorAll()
+        */
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'red'
+
+        var d2 = window.document.querySelector('div.msg2')
+        d2.style.color = 'yellow'
+    </script>
+
+</body>
+</html>

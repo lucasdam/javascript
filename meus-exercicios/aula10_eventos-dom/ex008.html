@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(121, 201, 121);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area">
+        <!-- Pode colocar isso dentro da tag div:
+        onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+        Interaja...
+    </div>
+
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">Event reference</a>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+
+        /* Eventos que podem ocorrer com o mouse na div:
+            mouseenter: cursor entrar na div
+            mousemove: cursor se mover dentro da div
+            mousedown: clicar e segurar dentro da div
+            mouseup: momento que soltar o click
+            click: clicar e soltar rapidamente
+            mouseout: tirar o cursor de dentro da div
+        */
+    </script>
+
+</body>
+</html>
